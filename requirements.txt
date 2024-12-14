@@ -1,5 +1,5 @@
-Django>=3.0,<4.0
-djangorestframework
+Django==3.2.x
+djangorestframework==3.12.x
 scikit-learn
 pandas
 numpy
