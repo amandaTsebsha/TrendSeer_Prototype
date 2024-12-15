@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import requests
+from django.http import JsonResponse
+from django.shortcuts import render
 import json
 from io import StringIO
 
@@ -35,3 +37,20 @@ if upload_file is not None:
     else:
         st.error("Error in uploading dataset.")
 
+
+def dashboard_view(request):
+    """
+    Renders the main dashboard page.
+    """
+    context = {
+        'title': 'Dashboard',
+        'description': 'Welcome to TrendSeer Dashboard',
+    }
+    return render(request, 'dashboard.html', context)
+
+
+
+def chart_data():
+    print("Chart Data")
+
+    # return None
