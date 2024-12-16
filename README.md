@@ -211,7 +211,7 @@ Submit a pull request with a detailed explanation of changes.
 
 Authors
 
-Amanda Nolwazi Tsebesha - https://github.com/amandaTsebsha/
+Amanda Nolwazi Tsebesha - https://github.com/amandaTsebsha
 
 
 Acknowledgments
