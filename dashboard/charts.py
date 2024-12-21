@@ -21,3 +21,13 @@ def plot_predictions(predictions):
                       template='plotly_dark', height=600, width=800)
 
     st.plotly_chart(fig)
+
+
+def plot(predictions):
+    plt.figure(figsize=(10, 6))
+    plt.plot(predictions)
+    plt.title('Prediction Results Over Time')
+    plt.xlabel('Time')
+    plt.ylabel('Prediction Value')
+    plt.grid(True)
+    plt.show()

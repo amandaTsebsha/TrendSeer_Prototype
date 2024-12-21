@@ -7,6 +7,7 @@ from sklearn.metrics import mean_squared_error
 #Fucntion to train model
 
 def train_model(dataset_path):
+    # Load the dataset (assuming it's a CSV file)
     data = pd.read_csv(dataset_path)
     #Assume the last column id the target varialble
 
@@ -17,6 +18,7 @@ def train_model(dataset_path):
 
     X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
 
+    #Inititalize the model
     model = RandomForestRegressor(n_estimators=100, random_state=42)
 
     #Train Model
@@ -40,6 +42,7 @@ def make_predictions(dataset_path):
     with open('ml_model.pkl', 'rb') as model_file:
         model = pickle.load(model_file)
 
+        #Load data to predict
         data = pd.read_csv(dataset_path)
 
         X = data.iloc[:, :-1]

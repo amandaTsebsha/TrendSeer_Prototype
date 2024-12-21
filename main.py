@@ -1,4 +1,9 @@
 # This is a sample Python script.
+from dashboard import charts
+from dashboard.charts import plot_predictions, plot
+from ml import *
+from ml.train import train
+
 
 # Press Ctrl+F5 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
@@ -9,8 +14,13 @@ def print_hi(name):
     print(f'Hi, {name}')  # Press F9 to toggle the breakpoint.
 
 
+
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
+    print(train())
+    # print(plot_predictions())
+    # print(plot())
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

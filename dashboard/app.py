@@ -5,8 +5,12 @@ from django.http import JsonResponse
 from django.shortcuts import render
 import json
 from io import StringIO
+from .charts import plot_predictions
 
+
+st.set_page_config(page_title="TrendSeer", layout="wide")
 st.title('TrendSeer - Business Prediction Dashboard')
+st.write("This is where you visualize your predictions ")
 
 upload_file = st.file_uploader("Upload you dataset", type='csv')
 

@@ -21,3 +21,15 @@ class Prediction(models.Model):
 
     def __str__(self):
         return f"Prediction for {self.dataset.name} at {self.predicted_at}"
+
+#
+# #Historical data model
+# class HistoricalData(models.Model):
+#     name = models.CharField(max_length=255)
+#     data_file = models.FileField(upload_to='uploads/')
+#     description = models.TextField()
+#
+#     def __str__(self):
+#         return self.name
+
+
