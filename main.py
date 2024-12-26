@@ -20,7 +20,7 @@ def print_hi(name):
 if __name__ == '__main__':
     print_hi('PyCharm')
     print(train())
-    # print(plot_predictions())
+    print(plot_predictions())
     # print(plot())
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

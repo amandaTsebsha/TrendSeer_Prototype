@@ -14,14 +14,14 @@ def preprocess_data(dataset_path):
     categorical_cols = data.select_dtypes(include=['object']).columns
 
     #Preprocessing pipeline
-    numeric_tranformer = Pipeline(steps=[('imputer', SimpleImputer(strategy='mean')),
+    numeric_transformer = Pipeline(steps=[('imputer', SimpleImputer(strategy='mean')),
                                          ('scaler', StandardScaler())])
-    categorical_tranfromer = Pipeline(steps=[('imputer', SimpleImputer(strategy='constant', fill_value='missing')),
+    categorical_transformer = Pipeline(steps=[('imputer', SimpleImputer(strategy='constant', fill_value='missing')),
                                              ('onehot', OneHotEncoder(handle_unknown='ignore'))])
     preprocessor = ColumnTransformer(
         transformers=[
-            ('num', numeric_tranformer, numeric_cols), ('cat', categorical_tranfromer, categorical_cols)])
+            ('num', numeric_transformer, numeric_cols), ('cat', categorical_transformer, categorical_cols)])
 
-    #Apply Preprocessing transfformations to the dataset
+    #Apply Preprocessing transformations to the dataset
     processed_data = preprocessor.fit_transform(data)
     return processed_data
